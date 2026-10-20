@@ -1,7 +1,7 @@
-export default function CoffeeCard({name, description, price, imageURL, category}){
+export default function CoffeeCard({name, description, price, imageURL, category, onAdd}){
 return(
 
-<div className="h-95 bg-white rounded-2xl shadow-md p-5 flex flex-col gap-3 ">
+<div className="h-95 bg-white rounded-2xl shadow-md p-5 flex flex-col gap-3 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:cursor-pointer">
 
 <img src={imageURL} alt={name} className="w-full h-40 object-cover rounded-xl"/>
 
@@ -13,8 +13,8 @@ return(
 
 <div className="mt-auto flex justify-between items-center"> 
   {/* ano */}
-<span className="text-lg font-semibold text-amber-800">{price}</span>
-<button className="cursor-pointer bg-amber-900 text-white px-4 py-1 rounded-full hover:bg-amber-700">
+<span className="text-lg font-semibold text-amber-800">₱{price}</span>
+<button onClick={onAdd} className="cursor-pointer bg-amber-900 text-white px-4 py-1 rounded-full hover:bg-amber-700">
     Add
 </button>
 </div>

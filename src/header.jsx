@@ -11,6 +11,8 @@ export default function Header(){
     return(
         <header className="relative bg-white shadow-sm px-6  py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-amber-900">☕ brew-ahead</h1>
+
+
 <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 flex gap-1 p-1 flex gap-5 font-medium rounded-full bg-amber-100  ">
 <Link to="/menu" 
 onClick={() => setActiveTab("menu")} 
@@ -32,6 +34,28 @@ className="md:hidden text-2xl text-amber-900 cursor-pointer">
 
 
 
+
+
+
+
+
+
+{isOpen && (
+    <div className='md:hidden absolute top-full left-0 w-full bg-white'>
+
+<Link
+to="/menu"
+onClick={() => {setActiveTab("menu");  setIsOpen(false);}}
+className="px-4 py-3 rounded-xl text-amber-900 hover:bg-amber-100">
+Menu
+</Link>
+
+<Link
+to="/menu"
+
+></Link>
+ </div>
+)}
 
         </header>
     );
