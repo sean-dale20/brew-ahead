@@ -92,18 +92,18 @@ d.name.toLowerCase().includes(search.toLowerCase())
       
       <div className='container max-w-5xl mx-auto px-3 mt-6 mb-8 '>
      
-      <div className='bg-stone-800 text-amber-50 rounded-2xl p-6 flex justify-between '>
- <div className='LEFT-SIDE'>
-<h2 className='text-2xl'>Order ahead, skip the line</h2>
+      <div className='LEFT/RIGHT-CONTAINER bg-stone-800 text-amber-50 rounded-2xl p-6 flex flex-col justify-between sm:flex-row justify-between '>
+ <div className='LEFT-SIDE ml-2 mb-2 sm:mb-0 sm:flex sm:flex-col mt-2  '>
+<h2 className='text-xl sm:text-2xl'>Order ahead, skip the line</h2>
 <p className='text-stone-300 text-sm mt-1'>We'll have it ready when you arrive</p>
 
-      <p>Earliest pickup: {earliestText}</p>
+      <p className='sm:mt-auto sm:ml-1'>Earliest pickup: {earliestText}</p>
 
 </div>
 
-<div className='RIGHT-SIDE max-w-sx bg-white/10 border-white/20 rounded-xl p-4'>
-<h2 className='font-bold text-sm uppercase tracking-wide text-amber-300'>Note</h2>
-  <p className='font-normal text-sm text-stone-300 mt-1'>Orders not picked up within the pickup window are forfeited, and payment is non-refundable.</p>
+<div className='RIGHT-SIDE   bg-white/10 border-white/20 rounded-xl p-2 sm:p-4 flex-row gap-4 max-w-xs'>
+<h2 className='font-bold text-sm uppercase tracking-wide text-amber-300'>Note:</h2>
+  <p className='font-normal text-sm text-stone-300 '>Orders not picked up within the pickup window are forfeited, and payment is non-refundable.</p>
 
 </div>
 
@@ -116,13 +116,13 @@ d.name.toLowerCase().includes(search.toLowerCase())
 placeholder='Search'
 value={search}
 onChange={(e) => setSearch(e.target.value)}
-className='search w-70 mt-7  bg-transparent rounded-full border border-stone-200 px-5 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-700 '
+className='search sm:w-60 w-45 mt-7   bg-transparent rounded-full border border-stone-400 px-5 py-1 shadow-sm  focus:outline-none focus:ring-2 focus:ring-amber-700 mr-3 sm:mr-0'
 >
 
 </input>
 </div>
 
- <div className='coffee-card-container w-420 justify-center align-center rounded-2xl grid grid-cols-3 gap-8 max-w-5xl mx-auto '>
+ <div className='coffee-card-container w-full justify-center align-center rounded-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto gap-8 max-w-5xl mx-auto '>
       {filtered.map((d) =>(
        
 <CoffeeCard

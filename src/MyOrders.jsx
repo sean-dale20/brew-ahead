@@ -26,11 +26,11 @@ cart.forEach((food) => {
 {cart.map((food, index) =>(
 
 <div className="flex justify-between bg-white rounded-xl p-4 mt-3 shadow-sm">
-<span>{food.name}</span>
+<span className="flex-1">{food.name}</span>
 
 
-<button className="cursor-pointer" onClick={() => remove(index)}>Remove</button>
-<span className="font-semibold text-amber-800">₱{food.price}</span>
+<button className="flex items-center gap-4 cursor-pointer" onClick={() => remove(index)}>Remove</button>
+<span className="w-16 text-right font-semibold text-amber-800">₱{food.price}</span>
 
 </div>
 

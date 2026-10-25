@@ -41,7 +41,7 @@ className="md:hidden text-2xl text-amber-900 cursor-pointer">
 
 
 {isOpen && (
-    <div className='md:hidden absolute top-full left-0 w-full bg-white'>
+    <div className='md:hidden absolute top-full left-0 w-full bg-white flex flex-col'>
 
 <Link
 to="/menu"
@@ -51,9 +51,13 @@ Menu
 </Link>
 
 <Link
-to="/menu"
+to="/orders"
+onClick={() => {setActiveTab("orders"); setIsOpen(false);}}
+className='px-4 py-3 rounded-xl text-amber-900 hover:bg-amber-100 '
 
-></Link>
+
+
+>MyOrders</Link>
  </div>
 )}
 
