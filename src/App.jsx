@@ -52,7 +52,7 @@ useEffect(() => {
 
 
 
-const prepMinutes = 20;
+const prepMinutes = 30;
 const earliest = getEarliestPickup(prepMinutes);
 const earliestText = earliest.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"});
 const earliestMIn = dateToTimeString(earliest);
